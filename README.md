@@ -7,8 +7,12 @@ If you're a student, you can get **$200 in free credit** for DigitalOcean throug
 2. Sign in with your **GitHub student account**.
 3. Apply for the **DigitalOcean offer**.
 4. Create an account using the provided link
-5. It will ask for a credit card to check you're real but should not debit it
-6. Remember to destroy your VPS once you're done with the project.
+5. It will ask for a credit card to check you're real but should not debit it (it will take like 1$ for 7 day to check it's working).
+6. Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!
+
+Note: you need to go to [42 Github Portal](https://github-portal.42.fr.) first to activate it.
+Note: I'm not responsible if you get credited for the use of DigitalOcean, read step by step and check multiple time you're not being billed before starting your VPS (Droplet).
+If you carefully follow the step you should not get debited.
 
 ## Creating a DigitalOcean Droplet and Adding SSH Key
 
@@ -16,7 +20,7 @@ If you're a student, you can get **$200 in free credit** for DigitalOcean throug
 1. Log in to your **DigitalOcean account**.
 2. Click on **Create → Droplets**.
 3. Choose a **Debian image**.
-4. Select your **Droplet size** (a small instance is enough for most tasks).
+4. Select your **Droplet size** (for inception 2vcpu and 2gb of RAM shoud be enough).
 5. Choose a **datacenter region** (pick the closest one for better performance).
 6. Under **Authentication**, select **SSH keys**.
 
@@ -149,4 +153,30 @@ export XAUTHORITY=~/.Xauthority
 Reconnect one last time in ssh with the -X flag, you can run GUI applications remotely!
 
 ---
+
+## Further setup, access your server online with a domain name !!
+
+Remember to install comfort application like VIM, Chromium, oh-my-bash, it will make all this easier.
+Check docker documentation on how to install it
+
+### 1. Once you have your docker setup working
+
+Edit your nginx.conf file to get access to your server online ! (I won't tell you how to)
+
+Then allow port 443 on UFW
+```sh
+sudo allow 443/tcp
+sudo ufw reload
+```
+
+### 2. Setup a domain name for your server
+
+1. Go to [DuckDNS.org](https://duckdns.org).
+2. Add a domain, something like **http://yourlogin-inception42.duckdns.org** would fit.
+3. Once the domain is created link it to your server ip below and click update ip.
+4. Wait a couple minute to a couple hour
+5. You should be able to access your wordpress and other settings from this address !!
+
+
+Congrats you deployed a functioning server for the first time ! 
 Enjoy your **42 Inception** setup on DigitalOcean! 🚀
