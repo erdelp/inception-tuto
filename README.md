@@ -41,7 +41,7 @@ If you carefully follow the step you should not get debited.**
 1. Log in to your **DigitalOcean account**.
 2. Click on **Create → Droplets**.
 3. Choose a **Debian image**.
-4. Select your **Droplet size** (for inception 2vcpu and 2gb of RAM shoud be enough).
+4. Select your **Droplet size** (for inception 1vcpu and 2gb of RAM shoud be enough).
 5. Choose a **datacenter region** (pick the closest one for better performance).
 6. Under **Authentication**, select **SSH keys**.
 
