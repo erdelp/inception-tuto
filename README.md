@@ -118,7 +118,7 @@ Now, you must specify the port when connecting:
 ```sh
 ssh -p 4242 login42@your_server_ip
 ```
-If it doesn't work you did something wrong, be sure to not logout fron root until everything is well set,
+If it doesn't work you did something wrong, be sure to not logout from root until everything is well set,
 If you can't login to your VPS anymore DigitalOcean has a recovery console you can use, check their documentation.
 
 ## Enabling X11 Forwarding (GUI Applications Over SSH)
