@@ -217,7 +217,8 @@ sudo ufw reload
 4. Wait a couple minute to a couple hour
 5. You should be able to access your wordpress and other settings from this address !!
 6. Your SSL key being self signed you will have an error message you can bypass
-7. If you want an actual SSL key for your DuckDNS domain look into Let's Encrypt and Certbot. Or use CloudFlare as a proxy to your domain (this won't work with DuckDNS though you will need your own TDL).
+7. If you want an actual SSL key for your DuckDNS domain look into Let's Encrypt and Certbot.
+8. Or use CloudFlare as a proxy to your domain (this won't work with DuckDNS though you will need your own TDL).
 
 ### 3. Security notes
 
