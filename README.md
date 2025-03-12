@@ -214,6 +214,11 @@ sudo ufw reload
 4. Wait a couple minute to a couple hour
 5. You should be able to access your wordpress and other settings from this address !!
 
+### 3. Security notes
+
+1. If you did do this note that the wordpress and nginx install you did are not very secure.
+2. Therefore you should always put your server down (docker compose down) and not leave it running if you're not attending the project at this time.
+
 
 Congrats you deployed a functioning server for the first time ! 
 Enjoy your **42 Inception** ! 🚀
