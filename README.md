@@ -213,6 +213,8 @@ sudo ufw reload
 3. Once the domain is created link it to your server ip below and click update ip.
 4. Wait a couple minute to a couple hour
 5. You should be able to access your wordpress and other settings from this address !!
+6. Your SSL key being self signed you will have an error message you can bypass
+7. If you want an actual SSL key for your DuckDNS domain look into Let's Encrypt and Certbot. Or use CloudFlare as a proxy to your domain (this won't work with DuckDNS though you will need your own TDL).
 
 ### 3. Security notes
 
