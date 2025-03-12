@@ -1,7 +1,16 @@
 # 42 Inception: DigitalOcean Setup with GitHub Student Pack
 
+## Goal of working on Inception like this
+
+1. No sgoinfre slowlyness, no heavy VM that takes hour to boot with a GUI
+2. You will never ever in your developer life deploy a project with a VM with a GUI, always on a server over SSH
+3. This will refresh the rudimentary server protection you learned on Born2BeRoot
+4. You will actually deploy your inception project online with a domain name and all that for FREE !
+
 ## Getting Free $200 Credit on DigitalOcean
 If you're a student, you can get **$200 in free credit** for DigitalOcean through the GitHub Student Developer Pack:
+
+This will allow you to get a VPS (Virtual Private Server) which is basically your own little VM hosted on DigitalOcean server, you will access it through SSH.
 
 1. Go to [GitHub Student Developer Pack](https://education.github.com/pack).
 2. Sign in with your **GitHub student account**.
