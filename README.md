@@ -115,6 +115,15 @@ Save and exit (`CTRL+X`, then `Y`, then `Enter`).
 
 ### 4. Allow SSH Traffic on Port 4242 and Install UFW
 
+First update the packages
+
+```sh
+sudo apt update
+sudo apt upgrade
+```
+
+Then install UFW
+
 ```sh
 sudo apt install ufw
 sudo ufw allow 4242/tcp
