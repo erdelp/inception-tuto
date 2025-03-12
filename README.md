@@ -201,4 +201,4 @@ Enjoy your **42 Inception** setup on DigitalOcean! 🚀
 
 ## WARNING
 
-###Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+### Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
