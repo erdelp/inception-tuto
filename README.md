@@ -68,7 +68,7 @@ ssh root@your_server_ip
 ## Securing Your Server
 
 Contrary to Born2BeRoot a VPS is online and accessible to all, to avoid malicious attempts to access your VM here is a very basic secure setup.
-You could push this server for future VPS you will run, look into Crowdsec and Fail2Ban
+You could push this further for future VPS you will run, look into Crowdsec and Fail2Ban but it's not neccessary for this project.
 
 ### 1. Create a New User
 Create a new user named `login42`:
