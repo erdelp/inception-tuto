@@ -24,7 +24,7 @@ This will allow you to get a VPS (Virtual Private Server) which is basically you
 1. Go to [GitHub Student Developer Pack](https://education.github.com/pack).
 2. Sign in with your **GitHub student account**.
 3. Apply for the **DigitalOcean offer**.
-4. Create an account using the provided link
+4. Create an account using the provided link and link your github account **or you won't get the free credit**
 5. It will ask for a credit card to check you're real but should not debit it (it will take like 1$ for 7 day to check it's working).
 6. **Remember to destroy your VPS once you're done with the project.**
 7. **If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!**
