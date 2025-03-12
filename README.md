@@ -2,7 +2,7 @@
 
 ## Goal of working on Inception like this
 
-1. No sgoinfre slowlyness, no heavy VM that takes hour to boot with a GUI, you will be able to work on your VM from anywhere with a terminal (and a valid pubkey)
+1. No sgoinfre slowlyness, no heavy VM that takes hours to boot with a GUI, you will be able to work on your VM from anywhere with a terminal (and a valid pubkey)
 2. You will never ever in your developer life deploy a project with a VM with a GUI, always on a server over SSH
 3. This will refresh the rudimentary server protection you learned on Born2BeRoot
 4. You will actually deploy your inception project online with a domain name and all that for FREE !
