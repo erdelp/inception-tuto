@@ -227,9 +227,9 @@ sudo ufw reload
 
 ### 4. Getting the .env file locally for your Makefile
 
-1.You should not push your .env file or docker secret to github or the vogosphere.
-2.Therefore you can just store it locally (for example in /var/)
-3.Then just add this line at the beginning of your makefile:
+1. You should not push your .env file or docker secret to github or the vogosphere.
+2. Therefore you can just store it locally (for example in /var/)
+3. Then just add this line at the beginning of your makefile:
 ```sh
 cp /var/.env ./srcs/
 ```
