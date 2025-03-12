@@ -185,10 +185,11 @@ You should have a browser window open that is running locally on your VM.
 
 ## WARNING
 
-### Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+### Remember to destroy your VPS once you're done with the project. 
+
+### If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ---
-
 
 ## Further setup, access your server online with a domain name !!
 
@@ -227,4 +228,6 @@ Enjoy your **42 Inception** ! 🚀
 
 ## WARNING
 
-### Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+### Remember to destroy your VPS once you're done with the project. 
+
+### If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
