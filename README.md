@@ -20,6 +20,7 @@ This will allow you to get a VPS (Virtual Private Server) which is basically you
 6. **Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!**
 
 Note: you need to go to [42 Github Portal](https://github-portal.42.fr.) first to activate it.
+
 **Note: I'm not responsible if you get credited for the use of DigitalOcean, read step by step and check multiple time you're not being billed before starting your VPS (Droplet).
 If you carefully follow the step you should not get debited.**
 
