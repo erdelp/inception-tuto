@@ -7,6 +7,13 @@
 3. This will refresh the rudimentary server protection you learned on Born2BeRoot
 4. You will actually deploy your inception project online with a domain name and all that for FREE !
 
+## Notes
+
+1. This setup will work on your own VM too, just skip the DigitalOcean step, you will still have a VM without GUI (faster reboot, faster install)
+2. I'm in no way affiliated with DigitalOcean it's just the free thing we get with the pack, you can use any other VPS provider (but you will pay)
+3. If something is wrong in this tutorial DM me or make a pull request on the readme ! 
+
+
 ## Getting Free $200 Credit on DigitalOcean
 If you're a student, you can get **$200 in free credit** for DigitalOcean through the GitHub Student Developer Pack:
 
@@ -196,7 +203,7 @@ sudo ufw reload
 
 
 Congrats you deployed a functioning server for the first time ! 
-Enjoy your **42 Inception** setup on DigitalOcean! 🚀
+Enjoy your **42 Inception** ! 🚀
 
 ## WARNING
 
