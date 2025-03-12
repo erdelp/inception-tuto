@@ -181,11 +181,12 @@ You should have a browser window open that is running locally on your VM.
 ## Further setup, access your server online with a domain name !!
 
 Remember to install comfort application like VIM, Chromium, oh-my-bash, it will make all this easier.
-Check docker documentation on how to install it
+
+The goal of this tutorial is not to tell you how to do your docker setup, just how to get an actual server and a more comfortable workspace for the project.
 
 ### 1. Once you have your docker setup working
 
-Edit your nginx.conf file to get access to your server online ! (I won't tell you how to)
+Edit your nginx.conf file to get access to your server online ! (As I said I won't tell you how to)
 
 Then allow port 443 on UFW
 ```sh
