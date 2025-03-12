@@ -225,6 +225,16 @@ sudo ufw reload
 1. If you did do this note that the wordpress and nginx install you did are not very secure.
 2. Therefore you should always put your server down (docker compose down) and not leave it running if you're not attending the project at this time.
 
+### 4. Getting the .env file locally for your Makefile
+
+1.You should not push your .env file or docker secret to github or the vogosphere.
+2.Therefore you can just store it locally (for example in /var/)
+3.Then just add this line at the beginning of your makefile:
+```sh
+cp /var/.env ./srcs/
+```
+4. This will copy your local .env file where it needs to be at each runtime, making the evaluation comfier.
+
 
 Congrats you deployed a functioning server for the first time ! 
 Enjoy your **42 Inception** ! 🚀
