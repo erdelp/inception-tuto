@@ -199,4 +199,6 @@ sudo ufw reload
 Congrats you deployed a functioning server for the first time ! 
 Enjoy your **42 Inception** setup on DigitalOcean! 🚀
 
-**Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!**
+## WARNING
+
+###Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
