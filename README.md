@@ -139,7 +139,9 @@ If you can't login to your VPS anymore DigitalOcean has a recovery console you c
 
 ## Enabling X11 Forwarding (GUI Applications Over SSH)
 
-To enable X11 forwarding (useful for running GUI applications), so here a browser to get access locally to login.42.fr follow these steps:
+The X Window System (X11, or simply X) is a windowing system for bitmap displays, common on Unix-like operating systems. Basically it manages windows and GUI Applications. 
+
+To enable X11 forwarding , so here a browser to get access locally to login.42.fr follow these steps:
 
 ### 1. Enable X11 Forwarding on the Server
 Edit the SSH configuration file again:
