@@ -180,6 +180,13 @@ You should have a browser window open that is running locally on your VM.
 
 ---
 
+## WARNING
+
+### Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+---
+
+
 ## Further setup, access your server online with a domain name !!
 
 Remember to install comfort application like VIM, Chromium, oh-my-bash, it will make all this easier.
