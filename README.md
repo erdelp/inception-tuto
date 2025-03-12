@@ -7,6 +7,8 @@
 3. This will refresh the rudimentary server protection you learned on Born2BeRoot
 4. You will actually deploy your inception project online with a domain name and all that for FREE !
 
+The goal of this tutorial is not to tell you how to do your docker setup, just how to get an actual server and a more comfortable workspace for the project.
+
 ## Notes
 
 1. This setup will work on your own VM too, just skip the DigitalOcean step, you will still have a VM without GUI (faster reboot, faster install)
@@ -182,7 +184,7 @@ You should have a browser window open that is running locally on your VM.
 
 Remember to install comfort application like VIM, Chromium, oh-my-bash, it will make all this easier.
 
-The goal of this tutorial is not to tell you how to do your docker setup, just how to get an actual server and a more comfortable workspace for the project.
+Again, the goal of this tutorial is not to tell you how to do your docker setup, just how to get an actual server and a more comfortable workspace for the project.
 
 ### 1. Once you have your docker setup working
 
