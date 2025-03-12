@@ -1,4 +1,4 @@
-# 42 Project: DigitalOcean Setup with GitHub Student Pack
+# 42 Inception: DigitalOcean Setup with GitHub Student Pack
 
 ## Getting Free $200 Credit on DigitalOcean
 If you're a student, you can get **$200 in free credit** for DigitalOcean through the GitHub Student Developer Pack:
@@ -6,15 +6,16 @@ If you're a student, you can get **$200 in free credit** for DigitalOcean throug
 1. Go to [GitHub Student Developer Pack](https://education.github.com/pack).
 2. Sign in with your **GitHub student account**.
 3. Apply for the **DigitalOcean offer**.
-4. Once approved, create an account on [DigitalOcean](https://www.digitalocean.com/).
-5. Redeem your **$200 credit** from the "Billing" section.
+4. Create an account using the provided link
+5. It will ask for a credit card to check you're real but should not debit it
+6. Remember to destroy your VPS once you're done with the project.
 
 ## Creating a DigitalOcean Droplet and Adding SSH Key
 
 ### 1. Create a Droplet
 1. Log in to your **DigitalOcean account**.
 2. Click on **Create → Droplets**.
-3. Choose an **Ubuntu image**.
+3. Choose a **Debian image**.
 4. Select your **Droplet size** (a small instance is enough for most tasks).
 5. Choose a **datacenter region** (pick the closest one for better performance).
 6. Under **Authentication**, select **SSH keys**.
@@ -22,15 +23,15 @@ If you're a student, you can get **$200 in free credit** for DigitalOcean throug
 ### 2. Add Your SSH Key
 1. On your local machine, check if you already have an SSH key:
    ```sh
-   cat ~/.ssh/id_rsa.pub
+   cat ~/.ssh/id_ed25519.pub || cat ~/.ssh/id_rsa.pub
    ```
    If you don’t have one, generate it using:
    ```sh
-   ssh-keygen -t rsa -b 4096
+   ssh-keygen -t ed_25519
    ```
 2. Copy your public key:
    ```sh
-   cat ~/.ssh/id_rsa.pub
+   cat ~/.ssh/ed_25519.pub
    ```
 3. In DigitalOcean, click **New SSH Key**, paste your public key, and save it.
 4. Click **Create Droplet** and wait for it to be ready.
@@ -41,10 +42,19 @@ Once your droplet is ready, use the following command to connect:
 ssh root@your_server_ip
 ```
 
-## Setting Up SSH on Port 4242
-By default, SSH runs on port `22`, but for security, **42 School requires using port 4242**. Follow these steps to set it up:
+## Securing Your Server
 
-### 1. Change SSH Port to 4242
+### 1. Create a New User
+Create a new user named `login42`:
+```sh
+adduser login42
+```
+Add the user to the sudo group:
+```sh
+usermod -aG sudo login42
+```
+
+### 2. Change SSH Port to 4242
 Edit the SSH configuration file:
 ```sh
 nano /etc/ssh/sshd_config
@@ -57,32 +67,53 @@ Replace it with:
 ```sh
 Port 4242
 ```
+
+### 3. Disable Root Login and Password Authentication
+Edit the SSH configuration file again:
+```sh
+nano /etc/ssh/sshd_config
+```
+Find and modify these lines to those values:
+```sh
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+AllowUsers login42
+MaxAuthTries 3
+LoginGraceTime 30
+```
 Save and exit (`CTRL+X`, then `Y`, then `Enter`).
 
-### 2. Restart SSH Service
+### 4. Allow SSH Traffic on Port 4242 and Install UFW
+
+```sh
+sudo apt install ufw
+sudo ufw allow 4242/tcp
+sudo ufw enable
+```
+
+### 5. Restart SSH Service
 Run the following command to apply changes:
 ```sh
 systemctl restart ssh
 ```
 
-### 3. Allow SSH Traffic on Port 4242
-If you're using a firewall (UFW), allow the new port:
-```sh
-ufw allow 4242/tcp
-```
-
-### 4. Connect Using the New SSH Port
+### 6. Connect Using the New SSH Port
 Now, you must specify the port when connecting:
 ```sh
-ssh -p 4242 root@your_server_ip
+ssh -p 4242 login42@your_server_ip
 ```
+If it doesn't work you did something wrong, be sure to not logout fron root until everything is well set,
+If you can't login to your VPS anymore DigitalOcean has a recovery console you can use, check their documentation.
 
 ## Enabling X11 Forwarding (GUI Applications Over SSH)
 
-To enable X11 forwarding (useful for running GUI applications), follow these steps:
+To enable X11 forwarding (useful for running GUI applications), so here a browser to get access locally to login.42.fr follow these steps:
 
 ### 1. Enable X11 Forwarding on the Server
-Edit the SSH configuration file:
+Edit the SSH configuration file again:
 ```sh
 nano /etc/ssh/sshd_config
 ```
@@ -91,6 +122,9 @@ Find and modify these lines:
 X11Forwarding yes
 X11DisplayOffset 10
 X11UseLocalhost no
+TCPKeepAlive yes
+ClientAliveInterval 60
+ClientAliveCountMax 3
 ```
 Save and restart SSH:
 ```sh
@@ -103,12 +137,16 @@ From your local machine, connect using:
 ssh -p 4242 -X root@your_server_ip
 ```
 
-### 3. Set X Authority
+### 3. Set X Authority to enable X11Forwarding
 After logging in, run:
+```sh
+nano ~/.bashrc
+```
+And add this line at the top
 ```sh
 export XAUTHORITY=~/.Xauthority
 ```
-Now, you can run GUI applications remotely!
+Reconnect one last time in ssh with the -X flag, you can run GUI applications remotely!
 
 ---
-Enjoy your **42 Project** setup on DigitalOcean! 🚀
+Enjoy your **42 Inception** setup on DigitalOcean! 🚀
