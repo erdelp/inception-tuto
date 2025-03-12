@@ -92,7 +92,6 @@ Find and modify these lines to those values:
 PermitRootLogin no
 PasswordAuthentication no
 PubkeyAuthentication yes
-PasswordAuthentication no
 PermitEmptyPasswords no
 AllowUsers login42
 MaxAuthTries 3
