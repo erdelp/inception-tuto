@@ -161,6 +161,14 @@ export XAUTHORITY=~/.Xauthority
 ```
 Reconnect one last time in ssh with the -X flag, you can run GUI applications remotely!
 
+Let's test it 
+```sh
+sudo apt install chromium
+chromium
+```
+
+You should have a browser window open that is running locally on your VM.
+
 ---
 
 ## Further setup, access your server online with a domain name !!
