@@ -176,7 +176,7 @@ systemctl restart ssh
 ### 2. Connect with X Forwarding
 From your local machine, connect using:
 ```sh
-ssh -p 4242 -X root@your_server_ip
+ssh -p 4242 -X login42@your_server_ip
 ```
 
 ### 3. Set X Authority to enable X11Forwarding
