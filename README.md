@@ -141,7 +141,7 @@ If you can't login to your VPS anymore DigitalOcean has a recovery console you c
 
 The X Window System (X11, or simply X) is a windowing system for bitmap displays, common on Unix-like operating systems. Basically it manages windows and GUI Applications. 
 
-X11 Forwarding, is as it's name tells us, Forwarding a window over the SSH protocol.
+X11 Forwarding, is as it's name tells us: Forwarding a window over the SSH protocol.
 
 To enable X11 forwarding ,and be able to launch a browser to get access locally to login.42.fr follow these steps:
 
