@@ -17,11 +17,11 @@ This will allow you to get a VPS (Virtual Private Server) which is basically you
 3. Apply for the **DigitalOcean offer**.
 4. Create an account using the provided link
 5. It will ask for a credit card to check you're real but should not debit it (it will take like 1$ for 7 day to check it's working).
-6. Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!
+6. **Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!**
 
 Note: you need to go to [42 Github Portal](https://github-portal.42.fr.) first to activate it.
-Note: I'm not responsible if you get credited for the use of DigitalOcean, read step by step and check multiple time you're not being billed before starting your VPS (Droplet).
-If you carefully follow the step you should not get debited.
+**Note: I'm not responsible if you get credited for the use of DigitalOcean, read step by step and check multiple time you're not being billed before starting your VPS (Droplet).
+If you carefully follow the step you should not get debited.**
 
 ## Creating a DigitalOcean Droplet and Adding SSH Key
 
@@ -197,3 +197,5 @@ sudo ufw reload
 
 Congrats you deployed a functioning server for the first time ! 
 Enjoy your **42 Inception** setup on DigitalOcean! 🚀
+
+**Remember to destroy your VPS once you're done with the project. If you do not YOU WILL BE CREDITED ONCE THE 200$ CREDIT RUN OUT !!!!!**
