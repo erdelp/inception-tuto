@@ -16,7 +16,7 @@ The goal of this tutorial is not to tell you how to do your docker setup, just h
 3. If something is wrong in this tutorial DM me or make a pull request on the readme ! 
 
 
-## Getting Free $200 Credit on DigitalOcean
+## Getting Free Credits on DigitalOcean
 If you're a student, you can get **$200 in free credit** for DigitalOcean through the GitHub Student Developer Pack:
 
 This will allow you to get a VPS (Virtual Private Server) which is basically your own little VM hosted on DigitalOcean server, you will access it through SSH.
