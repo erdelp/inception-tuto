@@ -125,7 +125,7 @@ cd .ssh
 touch authorized_keys
 ```
 
-In the authorized_keys file add your local id_ed25519/rsa keys with which you want to access your VM.
+In the authorized_keys file add your local public keys with which you want to access your VM. (Just like you would on Github or 42 intra).
 
 Then give the correct permissions to the file and folder:
 ```
