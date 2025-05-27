@@ -119,7 +119,8 @@ Switch to your login42 user
 ```su login42```
 
 If it doesn't exist create a .ssh folder and an authorized_keys file
-```mkdir .ssh
+```
+mkdir .ssh
 cd .ssh
 touch authorized_keys
 ```
@@ -127,7 +128,8 @@ touch authorized_keys
 In the authorized_keys file add your local id_ed25519/rsa keys with which you want to access your VM.
 
 Then give the correct permissions to the file and folder:
-```chmod 700 /home/login42/.ssh
+```
+chmod 700 /home/login42/.ssh
 chown login42:login42 /home/login42/.ssh
 chmod 600 /home/login42/.ssh/authorized_keys
 ```
