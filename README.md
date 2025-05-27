@@ -113,7 +113,20 @@ LoginGraceTime 30
 ```
 Save and exit (`CTRL+X`, then `Y`, then `Enter`).
 
-### 4. Allow SSH Traffic on Port 4242 and Install UFW
+### 5. Add your Authorized SSH Keys to login42
+
+Switch to your login42 user
+```su login42```
+
+If it doesn't exist create a .ssh folder and an authorized_keys file
+```mkdir .ssh
+cd .ssh
+touch authorized_keys
+```
+
+In the authorized_keys file add your local id_ed25519/rsa keys with which you want to access your VM.
+
+### 6. Allow SSH Traffic on Port 4242 and Install UFW
 
 First update the packages
 
@@ -130,13 +143,13 @@ sudo ufw allow 4242/tcp
 sudo ufw enable
 ```
 
-### 5. Restart SSH Service
+### 7. Restart SSH Service
 Run the following command to apply changes:
 ```sh
 systemctl restart ssh
 ```
 
-### 6. Connect Using the New SSH Port
+### 8. Connect Using the New SSH Port
 Now, you must specify the port when connecting:
 ```sh
 ssh -p 4242 login42@your_server_ip
