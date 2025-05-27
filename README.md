@@ -126,6 +126,12 @@ touch authorized_keys
 
 In the authorized_keys file add your local id_ed25519/rsa keys with which you want to access your VM.
 
+Then give the correct permissions to the file and folder:
+```chmod 700 /home/login42/.ssh
+chown login42:login42 /home/login42/.ssh
+chmod 600 /home/login42/.ssh/authorized_keys
+```
+
 ### 6. Allow SSH Traffic on Port 4242 and Install UFW
 
 First update the packages
