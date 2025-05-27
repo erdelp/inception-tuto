@@ -120,12 +120,13 @@ Switch to your login42 user
 
 If it doesn't exist create a .ssh folder and an authorized_keys file
 ```
-mkdir .ssh
-cd .ssh
+mkdir /home/login42/.ssh
+cd /home/login42/.ssh
 touch authorized_keys
 ```
 
 In the authorized_keys file add your local public keys with which you want to access your VM. (Just like you would on Github or 42 intra).
+```nano /home/login42/.ssh```
 
 Then give the correct permissions to the file and folder:
 ```
