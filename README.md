@@ -41,7 +41,7 @@ If you carefully follow the step you should not get debited.**
 1. Log in to your **DigitalOcean account**.
 2. Click on **Create → Droplets**.
 3. Choose a **Debian image**.
-4. Select your **Droplet size** (for inception 1vcpu and 2gb of RAM shoud be enough).
+4. Select your **Droplet size** (for inception 1vcpu and 2gb of RAM should be enough).
 5. Choose a **datacenter region** (pick the closest one for better performance).
 6. Under **Authentication**, select **SSH keys**.
 
@@ -52,11 +52,11 @@ If you carefully follow the step you should not get debited.**
    ```
    If you don’t have one, generate it using:
    ```sh
-   ssh-keygen -t ed_25519
+   ssh-keygen -t ed25519
    ```
 2. Copy your public key:
    ```sh
-   cat ~/.ssh/ed_25519.pub
+   cat ~/.ssh/id_ed25519.pub
    ```
 3. In DigitalOcean, click **New SSH Key**, paste your public key, and save it.
 4. Click **Create Droplet** and wait for it to be ready.
@@ -70,7 +70,7 @@ ssh root@your_server_ip
 ## Securing Your Server
 
 Contrary to Born2BeRoot a VPS is online and accessible to all, to avoid malicious attempts to access your VM here is a very basic secure setup.
-You could push this further for future VPS you will run, look into Crowdsec and Fail2Ban but it's not neccessary for this project.
+You could push this further for future VPS you will run, look into Crowdsec and Fail2Ban but it's not necessary for this project.
 
 ### 1. Create a New User
 Create a new user named `login42`:
@@ -107,10 +107,13 @@ PermitRootLogin no
 PasswordAuthentication no
 PubkeyAuthentication yes
 PermitEmptyPasswords no
-AllowUsers login42
+AuthorizedKeysFile .ssh/authorized_keys
 MaxAuthTries 3
 LoginGraceTime 30
+AllowUsers login42
 ```
+If ``AllowUsers`` is not present, add it manually at the end of the file.
+
 Save and exit (`CTRL+X`, then `Y`, then `Enter`).
 
 ### 5. Add your Authorized SSH Keys to login42
@@ -120,19 +123,19 @@ Switch to your login42 user
 
 If it doesn't exist create a .ssh folder and an authorized_keys file
 ```
-mkdir /home/login42/.ssh
-cd /home/login42/.ssh
+mkdir /home/$USER/.ssh
+cd /home/$USER/.ssh
 touch authorized_keys
 ```
 
 In the authorized_keys file add your local public keys with which you want to access your VM. (Just like you would on Github or 42 intra).
-```nano /home/login42/.ssh```
+```nano /home/$USER/.ssh/authorized_keys```
 
 Then give the correct permissions to the file and folder:
 ```
-chmod 700 /home/login42/.ssh
-chown login42:login42 /home/login42/.ssh
-chmod 600 /home/login42/.ssh/authorized_keys
+chmod 700 /home/$USER/.ssh
+chown -R $USER:$USER /home/$USER/.ssh
+chmod 600 /home/$USER/.ssh/authorized_keys
 ```
 
 ### 6. Allow SSH Traffic on Port 4242 and Install UFW
@@ -181,7 +184,7 @@ Edit the SSH configuration file again:
 ```sh
 nano /etc/ssh/sshd_config
 ```
-Find and modify these lines:
+Find and modify these lines (uncomment them if needed):
 ```sh
 X11Forwarding yes
 X11DisplayOffset 10
@@ -190,7 +193,11 @@ TCPKeepAlive yes
 ClientAliveInterval 60
 ClientAliveCountMax 3
 ```
-Save and restart SSH:
+After saving, install ``xauth``:
+```
+sudo apt install xauth
+```
+then restart SSH:
 ```sh
 systemctl restart ssh
 ```
@@ -242,7 +249,7 @@ Edit your nginx.conf file to get access to your server online ! (As I said I won
 
 Then allow port 443 on UFW
 ```sh
-sudo allow 443/tcp
+sudo ufw allow 443/tcp
 sudo ufw reload
 ```
 
